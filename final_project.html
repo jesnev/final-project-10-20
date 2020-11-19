@@ -7,28 +7,68 @@
 
 <script>
 function display_alert(){
-    alert(document.getElementById("name").value + "\n"
-+ document.getElementById("email").value + "\n"
+    alert(document.getElementById("Name").value + "\n"
++ document.getElementById("Email").value + "\n"
 + document.getElementById("Request").value + "\n"
 + document.getElementById("Region").value + "\n"
 + document.getElementById("Building").value + "\n"
-+ document.getElementById("Switch").value + "\n")
++ document.getElementById("Switch").value + "\n"
++ document.getElementById("OtherBox").value)
+}
+</script>
+<style>
+* {
+    box-sizing:border-box;
+  }
+
+  body {
+    margin:20px;
+    background-color: #fafafa;
+  }
+  
+  textarea {
+    width:100%;
+    resize: vertical;
+    padding:15px;
+    border-radius:15px;
+    border:0;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+    height:100px;
+  }
+
+  input[type=button] {
+    appearance:none;
+    -webkit-appearance:none;
+
+    padding:10px;
+    border:none;
+    background-color:#3F51B5;
+    color:#fff;
+    font-weight:600;
+    border-radius:5px;
+    width:100%;
 }
 
-
-</script>
-
+.type-1 {
+  border-radius:10px;
+  border: 1px solid #eee;
+  transition: .3s border-color;
+}
+.type-1:hover {
+  border: 1px solid #aaa;
+}
+</style>
+  
 
 </head>
 <body>
     <img src="Header-Background.jpg" width="900px" height="10px">
+
     <div>
         <!-- Command forward slash to comment -->
         <h1>Network Switch Request</h1>
-        <label for="name">Name:</label>
-            <input type="name" id="name" name="name">
-        <label for="email">Enter your email:</label>
-            <input type="email" id="email" name="email">
+        <input type="text" class="type-1" placeholder="Enter Name" id="Name" name="Name"/>
+        <input type="text" class="type-1" placeholder="Enter Email" id=Email name="Email"/>
         <form action="/action_page.php">
             <label for="Request">Request Type:</label>
             <select id="Request" name="Request">
@@ -36,6 +76,8 @@ function display_alert(){
               <option value="Interface Configuration">Interface Configuration</option>
               <option value="Other">Other</option>
             </select>
+        <div>    
+        <textarea placeholder="Comment..." id="OtherBox"></textarea>
         <div>
         <form action="/action_page.php">
             <label for="Region">Region_____:</label>
