@@ -23,8 +23,17 @@ function display_alert(){
 
   body {
     margin:20px;
-    background-color: #fafafa;
+    background-color: #222222;
   }
+
+  h1 { 
+      color: teal; 
+      font-family: 'Times New Roman', Times, serif; 
+      font-size: 54px; 
+      font-weight: 300; 
+      line-height: 58px; 
+      margin: 0 0 58px; 
+    }
   
   textarea {
     width:100%;
@@ -33,7 +42,7 @@ function display_alert(){
     border-radius:15px;
     border:0;
     box-shadow:4px 4px 10px rgba(0,0,0,0.06);
-    height:100px;
+    height:50px;
   }
 
   input[type=button] {
@@ -42,7 +51,7 @@ function display_alert(){
 
     padding:10px;
     border:none;
-    background-color:#3F51B5;
+    background-color: teal;
     color:#fff;
     font-weight:600;
     border-radius:5px;
@@ -50,26 +59,56 @@ function display_alert(){
 }
 
 .type-1 {
-  border-radius:10px;
-  border: 1px solid #eee;
+  border-radius:200px;
+  border: 12px solid #eee;
   transition: .3s border-color;
 }
 .type-1:hover {
-  border: 1px solid #aaa;
+  border: 10px solid #aaa;
 }
+
+.box {
+
+
+}
+
+.box select {
+  background-color: darkgray;
+  color: white;
+  padding: 10px;
+  width: 250px;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+  border-radius:200px;
+}
+
+label {
+font-size: 20px;
+color: #B4886B;
+font-weight: bold;
+display: block;
+width: 150px;
+float: left;
+}
+
+
 </style>
   
 
 </head>
 <body>
-    <img src="Header-Background.jpg" width="900px" height="10px">
-
     <div>
         <!-- Command forward slash to comment -->
         <h1>Network Switch Request</h1>
         <input type="text" class="type-1" placeholder="Enter Name" id="Name" name="Name"/>
         <input type="text" class="type-1" placeholder="Enter Email" id=Email name="Email"/>
-        <form action="/action_page.php">
+        <p> </p>
+        
+        <div class="box">
             <label for="Request">Request Type:</label>
             <select id="Request" name="Request">
               <option value="New Switch">New Switch Install</option>
@@ -77,41 +116,50 @@ function display_alert(){
               <option value="Other">Other</option>
             </select>
         <div>    
-        <textarea placeholder="Comment..." id="OtherBox"></textarea>
+            <p> </p>
+        <textarea placeholder="Other Request:" id="OtherBox"></textarea>
         <div>
-        <form action="/action_page.php">
-            <label for="Region">Region_____:</label>
+        <p> </p>
+            <div class="box">
+            <label for="Region">Region:</label>
             <select id="Region" name="Region">
                 <option value="SF">Sf</option>
                 <option value="LA">LA</option>
                 <option value="DC">DC</option>
             </select>
         <div>
-            <form action="/action_page.php">
-                <label for="Building">Building____:</label>
+            <p> </p>
+            <div class="box">
+                <label for="Building">Building:</label>
                 <select id="Building" name="Building">
                     <option value="EMB01">EMB01</option>
                     <option value="EMB02">EMB02</option>
                     <option value="EMB03">EMB04</option>
                 </select>
         <div>
-        <form action="/action_page.php">
-            <label for="Switch">Switch_____:</label>
+            <p> </p>
+            <div class="box">
+            <label for="Switch">Switch:</label>
             <select id="Switch" name="Switch">
                 <option value="emb01-sw1">emb01-sw1</option>
                 <option value="emb01-sw1">emb01-sw1</option>
                 <option value="emb01-sw1">emb01-sw1</option>
             </select>
+        
         <div>
-            <input type="button" onclick="display_alert()" value="Submit">
+            <p> </p>
 
+           
+
+
+            <input type="button" onclick="display_alert()" value="Submit">
         </div>
         </div>
-          </form>
+
+ 
 
     </div>
-    <img src="Header-Background.jpg" width="900px" height="10px">
-</body>
+   
 </html>
 
 
