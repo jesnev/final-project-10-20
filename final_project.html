@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+function display_alert(){
+    alert(document.getElementById("name").value + "\n"
++ document.getElementById("email").value + "\n"
++ document.getElementById("Request").value + "\n"
++ document.getElementById("Region").value + "\n"
++ document.getElementById("Building").value + "\n"
++ document.getElementById("Switch").value + "\n")
+}
+
+
+</script>
+
+
+</head>
+<body>
+    <img src="Header-Background.jpg" width="900px" height="10px">
+    <div>
+        <!-- Command forward slash to comment -->
+        <h1>Network Switch Request</h1>
+        <label for="name">Name:</label>
+            <input type="name" id="name" name="name">
+        <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email">
+        <form action="/action_page.php">
+            <label for="Request">Request Type:</label>
+            <select id="Request" name="Request">
+              <option value="New Switch">New Switch Install</option>
+              <option value="Interface Configuration">Interface Configuration</option>
+              <option value="Other">Other</option>
+            </select>
+        <div>
+        <form action="/action_page.php">
+            <label for="Region">Region_____:</label>
+            <select id="Region" name="Region">
+                <option value="SF">Sf</option>
+                <option value="LA">LA</option>
+                <option value="DC">DC</option>
+            </select>
+        <div>
+            <form action="/action_page.php">
+                <label for="Building">Building____:</label>
+                <select id="Building" name="Building">
+                    <option value="EMB01">EMB01</option>
+                    <option value="EMB02">EMB02</option>
+                    <option value="EMB03">EMB04</option>
+                </select>
+        <div>
+        <form action="/action_page.php">
+            <label for="Switch">Switch_____:</label>
+            <select id="Switch" name="Switch">
+                <option value="emb01-sw1">emb01-sw1</option>
+                <option value="emb01-sw1">emb01-sw1</option>
+                <option value="emb01-sw1">emb01-sw1</option>
+            </select>
+        <div>
+            <input type="button" onclick="display_alert()" value="Submit">
+
+        </div>
+        </div>
+          </form>
+
+    </div>
+    <img src="Header-Background.jpg" width="900px" height="10px">
+</body>
+</html>
+
+
+                <!-- document.getElementById("name").value + " "
+                + document.getElementById("email").value + " "
+                + document.getElementById("Request").value + " " -->
